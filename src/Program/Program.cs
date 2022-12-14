@@ -25,7 +25,7 @@ namespace Full_GRASP_And_SOLID
             tower.AddTask(new Task(GetProduct("Cemento"), 100, GetEquipment("Hormigonera"), 120));
             tower.AddTask(new Task(GetProduct("Arena"), 200, GetEquipment("Hormigonera"), 120));
             tower.AddTask(new Task(GetProduct("Tabla"), 50, GetEquipment("Martillo"), 15));
-            tower.PrintBuilding();
+            ConsolePrinter.PrintBuilding(tower); // Agregamos la impresión del edificio.
         }
 
         private static void PopulateCatalogs()
@@ -69,5 +69,10 @@ namespace Full_GRASP_And_SOLID
             var query = from Tool equipment in toolCatalog where equipment.Description == description select equipment;
             return query.FirstOrDefault();
         }
+        
+
+        
+        
+
     }
 }
